@@ -1,0 +1,345 @@
+.pokedex__top {
+  background: var(--red);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: var(--border-4px);
+  width: 440px;
+  height: 200px;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(140px);
+  z-index: 1;
+}
+
+.opened .pokedex__top {
+  animation: top-opened 1s ease 1s forwards;
+}
+
+@keyframes top-opened {
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.opened.closed .pokedex__top {
+  animation: top-closed 1s ease forwards;
+}
+
+@keyframes top-closed {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(140px);
+  }
+}
+
+.pokedex__top__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scan {
+  width: 88px;
+  height: 88px;
+  border-radius: var(--border-round);
+  border: var(--border-4px);
+  background-color: rgb(170, 170, 170);
+  position: relative;
+}
+
+.opened.closed .scan {
+  background-color: rgb(170, 170, 170) !important;
+}
+
+.opened .scan {
+  animation: scan 3s ease-in-out forwards;
+}
+
+@keyframes scan {
+  0% {
+    background-color: #3456D0;
+  }
+  10% {
+    background-color: rgb(170, 170, 170);
+  }
+  20% {
+    background-color: #3456D0;
+  }
+  30% {
+    background-color: rgb(170, 170, 170);
+  }
+  40% {
+    background-color: #3456D0;
+  }
+  50% {
+    background-color: rgb(170, 170, 170);
+  }
+  60% {
+    background-color: #3456D0;
+  }
+  70% {
+    background-color: rgb(170, 170, 170);
+  }
+  80% {
+    background-color: #3456D0;
+  }
+  90% {
+    background-color: rgb(170, 170, 170);
+  }
+  100% {
+    background-color: #3456D0;
+  }
+}
+
+.scan::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--border-round);
+  background: rgba(217, 217, 217, 0.76);
+  filter: blur(5.5px);
+  top: 25px;
+  right: 25px;
+}
+
+.scan::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 10px;
+  border-radius: var(--border-round);
+  background: rgba(182, 193, 233, 0.79);
+  filter: blur(5px);
+  transform: rotate(22.76deg);
+  top: 10px;
+  right: 15px;
+}
+
+.lights {
+  display: flex;
+  justify-content: space-between;
+  width: 84px;
+}
+
+.light {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--border-round);
+  border: var(--border-4px);
+}
+
+.light-blue {
+  background-color: rgb(170, 170, 170) ;
+}
+
+
+.light-yellow {
+  background-color: rgb(170, 170, 170);
+}
+
+.light-green {
+  background-color: rgb(170, 170, 170);
+}
+
+.opened.closed .light-blue {
+  background-color: rgb(170, 170, 170) !important;
+}
+
+.opened.closed .light-yellow {
+  background-color: rgb(170, 170, 170) !important;
+}
+
+.opened.closed .light-green {
+  background-color: rgb(170, 170, 170) !important;
+}
+
+.opened .light-blue {
+  animation: light-blue 2s step-end forwards;
+}
+
+.opened .light-yellow {
+  animation: light-yellow 2s step-end forwards;
+  animation-delay: 0.1s;
+}
+
+.opened .light-green {
+  animation: light-green 2s step-end forwards;
+  animation-delay: 0.2s;
+}
+
+
+@keyframes light-blue {
+  0% {
+    background-color: #2318A2;
+  }
+  10% {
+    background-color: rgb(170, 170, 170);
+  }
+  20% {
+    background-color: #2318A2;
+  }
+  30% {
+    background-color: rgb(170, 170, 170);
+  }
+  40% {
+    background-color: #2318A2;
+  }
+  50% {
+    background-color: rgb(170, 170, 170);
+  }
+  60% {
+    background-color: #2318A2;
+  }
+  70% {
+    background-color: rgb(170, 170, 170);
+  }
+  80% {
+    background-color: #2318A2;
+  }
+  90% {
+    background-color: rgb(170, 170, 170);
+  }
+  100% {
+    background-color: #2318A2;
+  }
+}
+
+@keyframes light-yellow {
+  0% {
+    background-color: #FBA500;
+  }
+  10% {
+    background-color: rgb(170, 170, 170);
+  }
+  20% {
+    background-color: #FBA500;
+  }
+  30% {
+    background-color: rgb(170, 170, 170);
+  }
+  40% {
+    background-color: #FBA500;
+  }
+  50% {
+    background-color: rgb(170, 170, 170);
+  }
+  60% {
+    background-color: #FBA500;
+  }
+  70% {
+    background-color: rgb(170, 170, 170);
+  }
+  80% {
+    background-color: #FBA500;
+  }
+  90% {
+    background-color: rgb(170, 170, 170);
+  }
+  100% {
+    background-color: #FBA500;
+  }
+}
+
+@keyframes light-green {
+  0% {
+    background-color: #1F8B1D;
+  }
+  10% {
+    background-color: rgb(170, 170, 170);
+  }
+  20% {
+    background-color: #1F8B1D;
+  }
+  30% {
+    background-color: rgb(170, 170, 170);
+  }
+  40% {
+    background-color: #1F8B1D;
+  }
+  50% {
+    background-color: rgb(170, 170, 170);
+  }
+  60% {
+    background-color: #1F8B1D;
+  }
+  70% {
+    background-color: rgb(170, 170, 170);
+  }
+  80% {
+    background-color: #1F8B1D;
+  }
+  90% {
+    background-color: rgb(170, 170, 170);
+  }
+  100% {
+    background-color: #1F8B1D;
+  }
+}
+
+.sound-output {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.output {
+  width: 48px;
+  height: 5px;
+  border-radius: 4px;
+  background: var(--black-1);
+}
+
+.pokedex__top__footer {
+  align-self: flex-end;
+  position: relative;
+}
+
+.pokedex__top__footer input {
+  width: 70px;
+  height: 37px;
+  border: var(--border-2px);
+  background: var(--transparent-2);
+  border-radius: 4px;
+  outline: none;
+}
+
+.pokedex__top__footer input::placeholder {
+  color: var(--black-2);
+}
+
+.opened .pokedex__top__footer input  {
+  animation: input-opened 1s ease 1s forwards;
+}
+
+@keyframes input-opened {
+  to {
+    width: 196px;
+  }
+}
+
+.closed .pokedex__top__footer input  {
+  animation: input-closed 1s ease 1s forwards;
+}
+
+@keyframes input-closed {
+  to {
+    width: 70px;
+  }
+}
+
+.pokedex__top__footer::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  top: 8px;
+  right: 15px;
+  background: var(--transparent-3);
+  border-radius: 4px;
+}

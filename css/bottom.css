@@ -1,0 +1,140 @@
+.pokedex__bottom {
+  background: var(--red);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: var(--border-4px);
+  width: 439px;
+  height: 254.32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding: 35px 40px;
+  transform: translateY(-195px);
+  z-index: 1;
+}
+
+.opened .pokedex__bottom {
+  animation: bottom-opened 1s ease 1s forwards;
+}
+
+@keyframes bottom-opened {
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.opened.closed .pokedex__bottom {
+  animation: bottom-closed 1s ease forwards;
+}
+
+@keyframes bottom-closed {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-195px);
+  }
+}
+
+.pokebola {
+  border: var(--border-4px);
+  width: max-content;
+  border-radius: var(--border-round);
+  overflow: hidden;
+  position: absolute;
+  top: -70px;
+  cursor: pointer;
+}
+
+.opened .pokebola  {
+  animation: pokebola-opened 1s ease forwards;
+}
+
+@keyframes pokebola-opened {
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
+.opened.closed .pokebola  {
+  animation: pokebola-closed 1s ease forwards;
+}
+
+@keyframes pokebola-closed {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.pokebola__top {
+  background: var(--red);
+  width: 152px;
+  height: 76px;
+  border-bottom: var(--border-4px);
+}
+
+.pokebola__ball {
+  border: var(--border-4px);
+  width: 65px;
+  height: 65px;
+  border-radius: var(--border-round);
+  overflow: hidden;
+  position: absolute;
+  top: 43px;
+  left: 43px;
+  background: var(--white);
+}
+
+.pokebola__bottom {
+  background: var(--white);
+  width: 152px;
+  height: 76px;
+}
+
+.page-buttons {
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-button {
+  width: 49px;
+  height: 49px;
+  border-radius: var(--border-round);
+  background: var(--black-1);
+  border: none;
+}
+
+.pokebuttons {
+  width: 202px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pokebutton {
+  width: 0; 
+  height: 0; 
+  border-radius: 4px;
+  background: transparent;
+}
+
+.left {
+  border-top: 46px solid transparent;
+  border-bottom: 46px solid transparent;
+  border-right: 60px solid var(--black-1);
+  border-left: none;
+}
+
+.right {
+  border-top: 46px solid transparent;
+  border-bottom: 46px solid transparent;
+  border-left: 60px solid var(--black-1);
+  border-right: none;
+}
